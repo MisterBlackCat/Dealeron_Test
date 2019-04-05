@@ -60,7 +60,7 @@ function SetItems(data){
   for(var x = 0; x < data.length; x++){
     subData[x] = data[x];
     var inp = document.createElement('input');
-    inp.setAttribute('type', 'text');
+    inp.setAttribute('type', 'number');
     inp.setAttribute('id', data[x].ID);
     inp.setAttribute('value', '0');
     var para = document.createElement('p');
