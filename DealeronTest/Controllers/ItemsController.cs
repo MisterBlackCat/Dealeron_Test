@@ -88,6 +88,10 @@ namespace DealeronTest.Controllers
 
                 tax = tax + p.item.GetTax() * p.count; 
             }
+			if(tax == 0)
+			{
+				return tax;
+			}
             tax = tax + (.05f - (tax % .05f));
             return tax; 
         }

@@ -63,6 +63,7 @@ function SetItems(data){
     inp.setAttribute('type', 'number');
     inp.setAttribute('id', data[x].ID);
     inp.setAttribute('value', '0');
+	inp.setAttribute('min', '0'); 
     var para = document.createElement('p');
     para.innerHTML = data[x].Name + " @ $" + data[x].ItemPrice.toFixed(2);
     para.appendChild(inp);
