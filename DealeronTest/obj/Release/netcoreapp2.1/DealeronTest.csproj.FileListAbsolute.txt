@@ -1,0 +1,15 @@
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\bin\Release\netcoreapp2.1\DealeronTest.deps.json
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\bin\Release\netcoreapp2.1\DealeronTest.runtimeconfig.json
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\bin\Release\netcoreapp2.1\DealeronTest.runtimeconfig.dev.json
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\bin\Release\netcoreapp2.1\DealeronTest.dll
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\bin\Release\netcoreapp2.1\DealeronTest.pdb
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\DealeronTest.csprojAssemblyReference.cache
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\DealeronTest.csproj.CoreCompileInputs.cache
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\DealeronTest.RazorAssemblyInfo.cache
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\DealeronTest.RazorAssemblyInfo.cs
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\DealeronTest.AssemblyInfoInputs.cache
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\DealeronTest.AssemblyInfo.cs
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\DealeronTest.RazorTargetAssemblyInfo.cache
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\DealeronTest.dll
+C:\Users\Black\source\repos\DealeronTest\DealeronTest\obj\Release\netcoreapp2.1\DealeronTest.pdb
