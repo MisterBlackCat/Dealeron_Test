@@ -36,8 +36,8 @@ function SubmitOrder(data, textBoxes){
           document.getElementById('Para').innerHTML = "";
           for(var x = 0; x < res.items.length; x++){
             var newP = document.createElement('p');
-            newP.innerHTML = res.items[x].Name + ": " +
-              res.items[x].total;
+              newP.innerHTML = res.items[x].Name + ": " +
+                parseFloat(res.items[x].total).toFixed(2);
             if(res.items[x].count > 1){
               newP.innerHTML = newP.innerHTML +
                 " (" + res.items[x].count +
