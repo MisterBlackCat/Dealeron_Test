@@ -52,7 +52,7 @@ namespace DealeronTest.Controllers
                 p.count = int.Parse((string)obj.GetValue("count"));
                 items.Add(p); 
             }
-
+            DBAccess.CreateOrder(items, GetPrice(items) + GetSalesTax(items), GetSalesTax(items));
             string resp = "{ \"items\":[";
             for(int y = 0; y < items.Count - 1; y++)
             {
@@ -94,12 +94,6 @@ namespace DealeronTest.Controllers
 			}
             tax = tax + (.05f - (tax % .05f));
             return tax; 
-        }
-
-        protected class ItemsPosted
-        {
-            public Item item { get; set; }
-            public int count { get; set; }
         }
     }
 }

@@ -15,10 +15,24 @@ namespace DealeronTest.Models
                 .GetSection("DearlonDB").Value;
         }
         public static IConfiguration Configuration; 
-        public static void CreateOrder()
+        public static void CreateOrder(List<ItemsPosted> items, float total, float tax)
         {
-
-        } 
+            SqlConnection conn = new SqlConnection(GetConnString());
+            Guid OrderID = Guid.NewGuid();
+            string cmd = "INSERT INTO [dbo].[Order] (ID, Total, Tax) VALUES " +
+                "('" + OrderID + "', '" + total + "', '" + tax + "');";
+            foreach (ItemsPosted item in items)
+            {
+                cmd = cmd + "INSERT INTO dbo.OrderItems (ItemID, count, OrderID) VALUES " +
+                    "('" + item.item.itemID + "', '" + item.count + "', '" + OrderID + "');";
+            }
+            SqlCommand command = new SqlCommand(cmd);
+            command.CommandType = System.Data.CommandType.Text;
+            command.Connection = conn;
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close(); 
+        }
 
         public static List<ItemForSale> GetOrder()
         {
