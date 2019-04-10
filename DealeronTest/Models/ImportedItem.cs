@@ -42,7 +42,7 @@ namespace DealeronTest.Models
             return "{ \"ID\": " + this.itemID +
                 ",\"Name\": \"" + this.itemName + "\"" +
                 ", \"FinalPrice\":" + this.GetFullPrice() + "" +
-                ", \"ItemPrice\": " + (itemPrice * 1.05) + " }";
+                ", \"ItemPrice\": " + (itemPrice) + " }";
         }
     }
 }
