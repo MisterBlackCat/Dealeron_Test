@@ -9,7 +9,7 @@ namespace DealeronTest.Models
     {
         public ImportedItem(int itemID, float itemPrice, string itemName)
         {
-            this.itemName = itemName;
+            this.itemName = "Imported " + itemName;
             this.itemPrice = (itemPrice);// * 1.05f);
             this.itemID = itemID;
         }
@@ -40,9 +40,9 @@ namespace DealeronTest.Models
         public override string GetJSONObject()
         {
             return "{ \"ID\": " + this.itemID +
-                ",\"Name\": \"Imported " + this.itemName + "\"" +
+                ",\"Name\": \"" + this.itemName + "\"" +
                 ", \"FinalPrice\":" + this.GetFullPrice() + "" +
-                ", \"ItemPrice\": " + itemPrice + " }";
+                ", \"ItemPrice\": " + (itemPrice * 1.05) + " }";
         }
     }
 }
