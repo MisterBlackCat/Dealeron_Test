@@ -33,7 +33,7 @@ namespace DealeronTest.Models
             }
             else
             {
-                return itemPrice;
+                return itemPrice + (itemPrice * .05f);
             }
         }
 
