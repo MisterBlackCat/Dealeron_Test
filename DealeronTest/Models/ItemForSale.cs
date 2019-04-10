@@ -24,21 +24,17 @@ namespace DealeronTest.Models
             }
             else
             {
-                return (itemPrice * .1f);
+                float withTax = (itemPrice * .1f);
+                float n = (withTax) + (.05f - (withTax % .05f));
+                return n;
             }
         }
+
         public override float GetFullPrice()
         {
-            if (!taxExcempt)
-            {
-                float finalPrice = itemPrice + (itemPrice * .1f);
-                return finalPrice + (.05f - (finalPrice % .05f));
-            }
-            else
-            {
-                return itemPrice;
-            }
-        }
+            return itemPrice + GetTax();
+        } 
+
         public override string GetJSONObject()
         {
             return "{ \"ID\": " + this.itemID + 

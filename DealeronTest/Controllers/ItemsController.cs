@@ -57,16 +57,16 @@ namespace DealeronTest.Controllers
             for(int y = 0; y < items.Count - 1; y++)
             {
                 resp = resp + "{\"Name\":\"" + items[y].item.itemName + "\"," +
-                    "\"total\":\"" + items[y].item.itemPrice * items[y].count + "\"," +
+                    "\"total\":\"" + items[y].item.GetFullPrice() * items[y].count + "\"," +
                     "\"count\":\"" + items[y].count + "\"," +
-                    "\"price\":\"" + items[y].item.itemPrice + "\"},";
+                    "\"price\":\"" + items[y].item.GetFullPrice() + "\"},";
             }
             resp = resp + "{\"Name\":\"" + items[items.Count - 1].item.itemName + "\"," +
-                "\"total\":\"" + items[items.Count - 1].item.itemPrice * items[items.Count - 1].count + "\"," +
+                "\"total\":\"" + items[items.Count - 1].item.GetFullPrice() * items[items.Count - 1].count + "\"," +
                 "\"count\":\"" + items[items.Count - 1].count + "\"," +
-                "\"price\":\"" + items[items.Count - 1].item.itemPrice + "\"}],";
+                "\"price\":\"" + items[items.Count - 1].item.GetFullPrice() + "\"}],";
             resp = resp + "\"tax\":\"" + GetSalesTax(items) + "\",";
-            resp = resp + "\"total\":\"" + (GetPrice(items) + GetSalesTax(items)) + "\"}";
+            resp = resp + "\"total\":\"" + GetPrice(items) + "\"}";
             return resp; 
         }
 
@@ -77,6 +77,7 @@ namespace DealeronTest.Controllers
             {
                 total = total + p.item.itemPrice * p.count; 
             }
+            total = total + GetSalesTax(items); 
             return total; 
         }
 
@@ -92,7 +93,6 @@ namespace DealeronTest.Controllers
 			{
 				return tax;
 			}
-            tax = tax + (.05f - (tax % .05f));
             return tax; 
         }
     }

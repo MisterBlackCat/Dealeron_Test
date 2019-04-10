@@ -17,24 +17,20 @@ namespace DealeronTest.Models
         {
             if (taxExcempt)
             {
-                return itemPrice * .05f;
+                float withTax = (itemPrice * .05f); 
+                float n = (withTax) + (.05f - (withTax % .05f));
+                return n;
             }
             else
             {
-                return  (itemPrice * .15f);// + (.05f - (itemPrice % .05f)));
+                float withTax = (itemPrice * .15f);
+                float n = (withTax) + (.05f - (withTax % .05f));
+                return n;
             }
         }
         public override float GetFullPrice()
         {
-            if (!taxExcempt)
-            {
-                float finalPrice = itemPrice + (itemPrice * .15f);
-                return finalPrice;// + (.05f - (finalPrice % .05f));
-            }
-            else
-            {
-                return itemPrice + (itemPrice * .05f);
-            }
+            return itemPrice + GetTax(); 
         }
 
         public override string GetJSONObject()
