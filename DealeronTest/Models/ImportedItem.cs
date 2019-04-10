@@ -17,7 +17,7 @@ namespace DealeronTest.Models
         {
             if (taxExcempt)
             {
-                return 0;
+                return itemPrice * .05f;
             }
             else
             {
