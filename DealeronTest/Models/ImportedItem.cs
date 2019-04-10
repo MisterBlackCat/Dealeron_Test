@@ -10,7 +10,7 @@ namespace DealeronTest.Models
         public ImportedItem(int itemID, float itemPrice, string itemName)
         {
             this.itemName = itemName;
-            this.itemPrice = (itemPrice * 1.05f);
+            this.itemPrice = (itemPrice);// * 1.05f);
             this.itemID = itemID;
         }
         public override float GetTax()
@@ -21,15 +21,15 @@ namespace DealeronTest.Models
             }
             else
             {
-                return  (itemPrice * .1f);// + (.05f - (itemPrice % .05f)));
+                return  (itemPrice * .15f);// + (.05f - (itemPrice % .05f)));
             }
         }
         public override float GetFullPrice()
         {
             if (!taxExcempt)
             {
-                float finalPrice = itemPrice + (itemPrice * .1f);
-                return finalPrice + (.05f - (finalPrice % .05f));
+                float finalPrice = itemPrice + (itemPrice * .15f);
+                return finalPrice;// + (.05f - (finalPrice % .05f));
             }
             else
             {
